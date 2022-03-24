@@ -26,6 +26,7 @@ export interface RemediationValues extends IdxOptions {
   authenticators?: (Authenticator | string)[];
   authenticator?: string | Authenticator;
   authenticatorsData?: Authenticator[];
+  resend?: boolean;
 }
 
 // Base class - DO NOT expose static remediationName
