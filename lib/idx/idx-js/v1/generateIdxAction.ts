@@ -12,6 +12,7 @@
 
 /* eslint-disable max-len */
 // @ts-nocheck
+import { IdxActionParams } from '../../types/idx-js';
 import { request } from '../client';
 import { divideActionParamsByMutability } from './actionParser';
 import { makeIdxState } from './makeIdxState';
@@ -23,7 +24,7 @@ const generateDirectFetch = function generateDirectFetch({
   toPersist 
 }) {
   const target = actionDefinition.href;
-  return async function(params) {
+  return async function(params: IdxActionParams = {}): Promise<IdxResponse> {
     const headers = {
       'content-type': 'application/json',
       'accept': actionDefinition.accepts || 'application/ion+json',
