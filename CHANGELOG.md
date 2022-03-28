@@ -1,5 +1,11 @@
 # Changelog
 
+## 6.3.1
+
+### Fixes
+
+- [#1155](https://github.com/okta/okta-auth-js/pull/1155) Fixes IDX action behavior, passes along optional parameters
+
 ## 6.3.0
 
 ### Features
